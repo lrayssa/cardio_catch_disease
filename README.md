@@ -120,6 +120,7 @@ If the price of diagnosis increases $500.00 every time the accuracy of the model
 
 **Step 10. Deploy Model to Production:**
 The plan is to develop a streamlit app where both analysts can include a dataset of patients to get a prediction or a person can fill a form to predict the probability of having a cardiovascular disease. 
+It can be accessed by: http://cardio-catch-diseases-lda.herokuapp.com/
 
 # 4. Top 3 Data Insights
 
@@ -189,6 +190,9 @@ This project was great to improve my python coding skills and to learn a bit abo
 # 10. Next Steps to Improve
 Next steps to improve the model are to make new considerations about the examination data, creating new features and to treat outliers instead of dropping them. 
 I can also test other models to check if there is any improvement of the performance. 
+
+The app could be improved with more features, a better layout etc.
+
 To finish, my final recomendation after all those improvements would be other manners to collect data to train our models. 
 
 # All Rights Reserved - Comunidade DS 2021
