@@ -1,3 +1,5 @@
+![CCD cover](references/cover.png)
+
 # Cardio Catch Disease
 
 *This is a classification project that creates a model to predict if someone has a cardiovascular disease.*
@@ -101,30 +103,12 @@ For this project, Boruta selected three features, which were the most important 
 
 
 **Step 07. Machine Learning Modelling:**
-I chose six machine learning models to test and compare results. They were: 
-
-- Logistic regression
-- Random Forest
-- Gradient Boosting
-- Knn Classifier
-- SVC
-- XGBoost Classifier
+I chose six machine learning models to test and compare results. 
 
 I trained all of them and then I compared accuracy and recall metrics to choose the best one. 
 Accuracy was the chosen metric because it is what determine the income of Cardio Catch Diseases. Althought, is good to look at recall metrics as well because a sick person misdiagnosed as healthy could cause trouble with lawsuits that can costs a lot to the company.
 
-To check the real metrics, I also used a K-fold cross validation method. Here are the results: 
-
-|   |               model |          accuracy |       precision_1 |          recall_1 |
-|--:|--------------------:|------------------:|------------------:|------------------:|
-|   |   gradient boosting |  0.7278 +/- 0.004 | 0.7433 +/- 0.0056 | 0.6854 +/- 0.0057 |
-|   |             svm-svc | 0.7255 +/- 0.0031 | 0.7634 +/- 0.0044 | 0.6437 +/- 0.0067 |
-|   |             xgboost |  0.7252 +/- 0.001 | 0.7442 +/- 0.0035 | 0.6757 +/- 0.0059 |
-|   | logistic regression | 0.7219 +/- 0.0052 | 0.7503 +/- 0.0061 |  0.6545 +/- 0.008 |
-|   |       random forest | 0.7082 +/- 0.0036 | 0.7105 +/- 0.0047 | 0.6902 +/- 0.0085 |
-|   |                 knn | 0.6895 +/- 0.0021 |  0.6895 +/- 0.002 | 0.6754 +/- 0.0083 |
-
-The model that performed better after cross validation was the Gradient Boosting, and it was the chosen one to go on.
+To check the real metrics, I also used a K-fold cross validation method. 
 
 **Step 08. Hyperparameter Fine Tunning:**
 The Hyperparameter Fine Tunning is an important step to ensure we are using the best parameters to train our model. 
@@ -139,30 +123,72 @@ The plan is to develop a streamlit app where both analysts can include a dataset
 
 # 4. Top 3 Data Insights
 
-**Hypothesis 01:**
-
-**True/False.**
-
 **Hypothesis 02:**
+Men under 50 should be more lihely to have a CVD than women
 
-**True/False.**
+**True.**
+Men under 50 are slightly more likely to have a CVD than women 
+![H2 validation](references/h2.png)
 
-**Hypothesis 03:**
+**Hypothesis 08:**
+Non active / sedentary people are more likely to have a CVD
 
-**True/False.**
+**False.**
+Active people are more likely to have a CVD.
+![H8 validation](references/h8.png)
+
+**Hypothesis 09:** Smokers should be more likely to have a CVD.
+
+
+**False.** Non smokers are slightly more likely to have a CVD
+![H9 validation](references/h9.png)
 
 # 5. Machine Learning Model Applied
+The ML models applied were:
+
+- Logistic regression
+- Random Forest
+- Gradient Boosting
+- Knn Classifier
+- SVC
+- XGBoost Classifier
+
+Here are the results: 
+
+|               model |          accuracy |       precision_1 |          recall_1 |
+|--------------------:|------------------:|------------------:|------------------:|
+|   gradient boosting |  0.7278 +/- 0.004 | 0.7433 +/- 0.0056 | 0.6854 +/- 0.0057 |
+|             svm-svc | 0.7255 +/- 0.0031 | 0.7634 +/- 0.0044 | 0.6437 +/- 0.0067 |
+|             xgboost |  0.7252 +/- 0.001 | 0.7442 +/- 0.0035 | 0.6757 +/- 0.0059 |
+| logistic regression | 0.7219 +/- 0.0052 | 0.7503 +/- 0.0061 |  0.6545 +/- 0.008 |
+|       random forest | 0.7082 +/- 0.0036 | 0.7105 +/- 0.0047 | 0.6902 +/- 0.0085 |
+|                 knn | 0.6895 +/- 0.0021 |  0.6895 +/- 0.002 | 0.6754 +/- 0.0083 |
+
+The model that performed better after cross validation was the Gradient Boosting, and it was the chosen one to go on.
 
 # 6. Machine Learning Model Performance
+After choose a model, a step of hyperparameter fine-tunning was made, using a Random Search approach. 
+Finally we got to the final model performance:
+
+|         model                 |          accuracy |       precision_1 |          recall_1 |
+|------------------------------:|------------------:|------------------:|------------------:|
+|   gradient boosting tunned    |  0.7281 +/- 0.004 | 0.7438 +/- 0.0055 | 0.6854 +/- 0.0048 |
 
 # 7. Business Results
+Converting this values to business language, this means that, with this model, CCD can precify their services with a minimum of $ 2,280.00.
+On the best scenario, considering a baseline of 70,000 customers, CCD could have a **profit** of k$ 92.5 on the best scenario or k$ 86,9 on the worst scenario. 
+
 
 # 8. Conclusions
+Sometimes, simple models can bring great benefits for an organization. <br>
+However, any machine larning model is limited by the data. This was a very simple dataset with just a few features. Some of the data were subjective and others were not very clear. 
 
 # 9. Lessons Learned
+This project was great to improve my python coding skills and to learn a bit about classification metrics, encodings and transformations. 
 
 # 10. Next Steps to Improve
-
-# LICENSE
+Next steps to improve the model are to make new considerations about the examination data, creating new features and to treat outliers instead of dropping them. 
+I can also test other models to check if there is any improvement of the performance. 
+To finish, my final recomendation after all those improvements would be other manners to collect data to train our models. 
 
 # All Rights Reserved - Comunidade DS 2021
